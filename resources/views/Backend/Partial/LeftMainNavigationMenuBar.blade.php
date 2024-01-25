@@ -33,8 +33,8 @@
 							<span class="nav-text">Product</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="./ui-accordion.html">Add new Product</a></li>
-                            <li><a href="./ui-alert.html">Product List</a></li>
+                            <li><a href="{{ route('product.new.form') }}">Add new Product</a></li>
+                            <li><a href="{{ route('Product.List') }}">Product List</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
