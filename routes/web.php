@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\HomeController;
+use App\Http\Controllers\Backend\Category\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,6 @@ use App\Http\Controllers\Backend\HomeController;
 // });
 
 Route::get('/', [HomeController::class, 'HomeController'])->name('admin.home');
+
+Route::get('/categories-list', [CategoryController::class, 'categoriesList'])->name('Category.List');
+Route::get('/create-new-category-form', [CategoryController::class, 'createNewCategoryForm'])->name('Category.New.Form');

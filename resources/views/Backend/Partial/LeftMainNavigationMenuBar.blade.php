@@ -4,8 +4,8 @@
 							<span class="nav-text">Category</span>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href="index.html">Add new Category</a></li>
-							<li><a href="index-2.html">Category List</a></li>
+							<li><a href="{{ route('Category.New.Form') }}">Add new Category</a></li>
+							<li><a href="{{ route('Category.List') }}">Category List</a></li>
 						</ul>
 
                     </li>
