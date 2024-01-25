@@ -25,6 +25,7 @@ Route::get('/', [HomeController::class, 'HomeController'])->name('admin.home');
 
 Route::get('/categories-list', [CategoryController::class, 'categoriesList'])->name('Category.List');
 Route::get('/create-new-category-form', [CategoryController::class, 'createNewCategoryForm'])->name('Create.New.Category.Form');
+Route::post('/category-from-post', [CategoryController::class, 'categoryStore'])->name('Category.Store');
 
 Route::get('/products-list', [ProductController::class, 'productsList'])->name('Product.List');
 Route::get('/create-new-product-form', [ProductController::class, 'createNewProductForm'])->name('Create.New.Product.Form');

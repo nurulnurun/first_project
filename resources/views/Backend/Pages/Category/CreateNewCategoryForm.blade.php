@@ -7,8 +7,8 @@
 </div>
 
 <div>
-    <form>
-            
+    <form action = "{{ route('Category.Store') }}" method = "post">
+            @csrf
         <div class="mb-3">
             <label for="categoryID" class="form-label">Category ID</label>
             <input type="number" class="form-control" id="" name="category_id" placeholder="Enter Category ID">
