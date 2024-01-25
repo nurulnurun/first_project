@@ -4,7 +4,7 @@
 							<span class="nav-text">Category</span>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href="{{ route('Category.New.Form') }}">Add new Category</a></li>
+							<li><a href="{{ route('Create.New.Category.Form') }}">Add new Category</a></li>
 							<li><a href="{{ route('Category.List') }}">Category List</a></li>
 						</ul>
 
@@ -33,7 +33,7 @@
 							<span class="nav-text">Product</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ route('product.new.form') }}">Add new Product</a></li>
+                            <li><a href="{{ route('Create.New.Product.Form') }}">Add new Product</a></li>
                             <li><a href="{{ route('Product.List') }}">Product List</a></li>
                         </ul>
                     </li>
@@ -42,8 +42,8 @@
 							<span class="nav-text">Brand</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="./uc-select2.html">Add new Brand</a></li>
-                            <li><a href="./uc-nestable.html">Brand List</a></li>
+                            <li><a href="{{ route('Create.New.Brand.Form') }}">Add new Brand</a></li>
+                            <li><a href="{{ route('Brand.List') }}">Brand List</a></li>
                         </ul>
                     </li>
                     <!-- <li><a href="widget-basic.html" class="" aria-expanded="false">

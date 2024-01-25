@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\Category\CategoryController;
 use App\Http\Controllers\Backend\Product\ProductController;
+use App\Http\Controllers\Backend\Brand\BrandController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,10 @@ use App\Http\Controllers\Backend\Product\ProductController;
 Route::get('/', [HomeController::class, 'HomeController'])->name('admin.home');
 
 Route::get('/categories-list', [CategoryController::class, 'categoriesList'])->name('Category.List');
-Route::get('/create-new-category-form', [CategoryController::class, 'createNewCategoryForm'])->name('Category.New.Form');
+Route::get('/create-new-category-form', [CategoryController::class, 'createNewCategoryForm'])->name('Create.New.Category.Form');
 
-Route::get('/product-list', [ProductController::class, 'productsList'])->name('Product.List');
-Route::get('/create-new-product-form', [ProductController::class, 'createNewProductForm'])->name('product.new.form');
+Route::get('/products-list', [ProductController::class, 'productsList'])->name('Product.List');
+Route::get('/create-new-product-form', [ProductController::class, 'createNewProductForm'])->name('Create.New.Product.Form');
+
+Route::get('/brands-list', [BrandController::class, 'brandsList'])->name('Brand.List');
+Route::get('/create-new-brand-form', [BrandController::class, 'createNewBrandForm'])->name('Create.New.Brand.Form');
