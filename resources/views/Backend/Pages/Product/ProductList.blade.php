@@ -3,7 +3,7 @@
 @section('Main Content')
 
 <div>
-    <h1>Product List</h1> <a href="#" class="btn btn-success btn-sm" style = "float:right; margin-top:-50px">Create new Product</a>
+    <h1>Product List</h1> <a href="{{ route('Create.New.Product.Form') }}" class="btn btn-success btn-sm" style = "float:right; margin-top:-50px">Create new Product</a>
 </div>
 
 <div>
@@ -22,24 +22,24 @@
         </thead>
 
         <tbody>
-                
+                @foreach($products as $Product_Item)
             <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td>
-                    
+                <th scope="row">{{ $Product_Item->id }}</th>
+                <td>{{ $Product_Item->product_id }}</td>
+                <td>{{ $Product_Item->product_name }}</td>
+                <td>{{ $Product_Item->product_image }}
+
                 </td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{ $Product_Item->product_price }}</td>
+                <td>{{ $Product_Item->product_stock }}</td>
+                <td>{{ $Product_Item->product_status }}</td>
             <td>
                 <a class="btn btn-success btn-sm" href="">Edit</a>
                 <a class="btn btn-danger btn-sm" href="">Delete</a>
                 <a class="btn btn-primary btn-sm" href="">View</a>
             </td>
             </tr>
-                
+                @endforeach
         </tbody>
     </table>
 </div>

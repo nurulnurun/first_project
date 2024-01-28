@@ -29,6 +29,8 @@ Route::post('/category-from-post', [CategoryController::class, 'categoryStore'])
 
 Route::get('/products-list', [ProductController::class, 'productsList'])->name('Product.List');
 Route::get('/create-new-product-form', [ProductController::class, 'createNewProductForm'])->name('Create.New.Product.Form');
+Route::post('/product-from-post', [ProductController::class, 'productStore'])->name('Product.Store');
 
 Route::get('/brands-list', [BrandController::class, 'brandsList'])->name('Brand.List');
 Route::get('/create-new-brand-form', [BrandController::class, 'createNewBrandForm'])->name('Create.New.Brand.Form');
+Route::post('/brand-from-post', [BrandController::class, 'brandStore'])->name('Brand.Store');

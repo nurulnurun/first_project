@@ -3,12 +3,12 @@
 @section('Main Content')
 
 <div>
-    <h1>Create new Brand</h1> <a href="#" class="btn btn-success btn-sm" style = "float:right; margin-top:-50px">Show Brand List</a>
+    <h1>Create new Brand</h1> <a href="{{ route('Brand.List') }}" class="btn btn-success btn-sm" style = "float:right; margin-top:-50px">Show Brand List</a>
 </div>
 
 <div>
-    <form>
-            
+    <form action = "{{ route('Brand.Store') }}" method = "post">
+            @csrf
         <div class="mb-3">
             <label for="brandID" class="form-label">Brand ID</label>
             <input type="number" class="form-control" id="" name="brand_id" placeholder="Enter Brand ID">

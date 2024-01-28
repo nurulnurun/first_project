@@ -3,7 +3,7 @@
 @section('Main Content')
 
 <div>
-    <h1>Brand List</h1> <a href="#" class="btn btn-success btn-sm" style = "float:right; margin-top:-50px">Create new Brand</a>
+    <h1>Brand List</h1> <a href="{{ route('Create.New.Brand.Form') }}" class="btn btn-success btn-sm" style = "float:right; margin-top:-50px">Create new Brand</a>
 </div>
 
 <div>
@@ -21,21 +21,21 @@
         </thead>
 
         <tbody>
-                
+                @foreach($brands as $Brand_Item)
             <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <th scope="row">{{ $Brand_Item->id }}</th>
+                <td>{{ $Brand_Item->brand_id }}</td>
+                <td>{{ $Brand_Item->brand_name }}</td>
+                <td>{{ $Brand_Item->brand_status }}</td>
+                <td>{{ $Brand_Item->brand_image }}</td>
+                <td>{{ $Brand_Item->brand_description }}</td>
             <td>
                 <a class="btn btn-success btn-sm" href="">Edit</a>
                 <a class="btn btn-danger btn-sm" href="">Delete</a>
                 <a class="btn btn-primary btn-sm" href="">View</a>
             </td>
             </tr>
-                
+                @endforeach
         </tbody>
     </table>
 </div>
